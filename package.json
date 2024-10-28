@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Washumaru.github.io/Washuaibeta.github.io/build",
+  "homepage": "https://washumaru.github.io/Washuaibeta.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
