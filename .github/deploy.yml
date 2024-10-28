@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Cambia a 'master' si esa es tu rama principal
+      - main # o master, según cual uses
 
 permissions:
   contents: write
@@ -27,9 +27,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: dist # La carpeta que contiene los archivos compilados
-          branch: gh-pages # La rama donde se desplegará
-          clean: true # Elimina archivos antiguos
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: washumaru.github.io # Si tienes un dominio personalizado

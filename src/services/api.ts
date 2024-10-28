@@ -100,7 +100,7 @@ RECORDATORIO FINAL:
     return completion.choices[0]?.message?.content || "No se pudo generar una solución.";
   } catch (error) {
     console.error('Error al resolver el problema:', error);
-    throw new Error('Error al conectar con el servicio de IA. Por favor, intenta de nuevo más tarde.');
+    throw new Error('La Aplicacion se encuentra en mantenimiento o Hubo un error al conectar con el servicio de AI, Favor de intentar de nuevo mas tarde.');
   }
 }
 
